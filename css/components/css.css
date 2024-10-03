@@ -1,7 +1,7 @@
 .css p {
-  background-color: #2965F1;
+  background-color: #2965f1;
   color: white;
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: bold;
   border-radius: 5px 5px 0 0;
   padding: 3px 10px 0 10px;
@@ -10,7 +10,7 @@
 
 .css-code {
   border-radius: 0 5px 5px 5px;
-  background: #000;
+  background: #1d1e22;
   color: white;
   overflow: hidden;
   padding-inline: 10px;
