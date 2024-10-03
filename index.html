@@ -6,43 +6,82 @@
     <link rel="stylesheet" href="./css/style.css" />
     <title>HTML - CSS - JS Hub</title>
   </head>
-  <body>
+  <body class="line-brea">
     <header>
       <h1>HTML / CSS / JS Hub</h1>
     </header>
+    <!-- Jump to: -->
+    <nav class="line-break">
+      <p><strong>Jump to:</strong></p>
+      <ul>
+        <li><a href="#abbr">Abbreviation &ltabbr&gt</a></li>
+        <li><a href="#border">Border &ltborder&gt</a></li>
+        <li><a href="#css-flex">CSS Flex</a></li>
+        <li><a href="#css-grid">CSS Grid</a></li>
+        <li><a href="#show-hide">Show / Hide</a></li>
+      </ul>
+    </nav>
     <hr />
-    <main>
-      <!-- Jump to: -->
-      <nav>
-        <h1>Jump to:</h1>
-        <ul>
-          <li>Show / Hide Elements</li>
-        </ul>
-      </nav>
-      <hr />
-      <!-- Flex -->
-      <section>
-        <h2>CSS Flex</h2>
-      </section>
-      <hr />
-      <!-- Grid -->
-      <section>
-        <h2>CSS Grid</h2>
-      </section>
-      <hr />
-      <!-- Show / Hide Elements -->
-      <section>
-        <h2>Show / Hide Elements</h2>
-      </section>
-      <hr />
-      <!-- Border -->
-      <section>
-        <h2>Border</h2>
-        <h3>Effects</h3>
+    <main class="line-break">
+      <!-- Abbrevition <abbr> -->
+      <section id="abbr" class="line-break">
+        <h3>Abbreviation &ltabbr&gt</h3>
         <div>
-          <p>hey!</p>
+          <abbr title="Hyper Text MarkUp Language">HTML</abbr>
+          <abbr title="Cascading Style Sheets">CSS</abbr>
+          <abbr title="Javascript">JS</abbr>
+        </div>
+        <!-- HTML -->
+        <div class="html">
+          <p>HTML</p>
+          <div class="html-code">
+            <pre><code>
+&ltabbr title="Hyper Text MarkUp Language"&gtHTML&lt/abbr&gt 
+            </code></pre>
+          </div>
         </div>
       </section>
+      <hr />
+      <!-- Border <border> -->
+      <section id="border" class="line-break">
+        <h3>Border &ltborder&gt</h3>
+        <div>
+          <span>CSS</span>
+          <pre>
+              <code>
+  .border div {
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    width: 100px;
+    height: 100px;
+    }
+              </code>
+            </pre>
+        </div>
+        <h4>Solid</h4>
+        <div class="solid">...</div>
+        <h4>Effects</h4>
+        <div>
+          <p>...</p>
+        </div>
+      </section>
+      <hr />
+      <!-- CSS Flex -->
+      <section id="css-flex">
+        <h3>CSS Flex</h3>
+      </section>
+      <hr />
+      <!-- CSS Grid -->
+      <section id="css-grid">
+        <h3>CSS Grid</h3>
+      </section>
+      <hr />
+      <!-- Show / Hide -->
+      <section id="show-hide">
+        <h3>Show / Hide Elements</h3>
+      </section>
+      <hr />
     </main>
   </body>
 </html>

@@ -1,1 +1,32 @@
-@import "./global/typography.css"
+/* Global */
+@import "./global/reset.css";
+@import "./global/typography.css";
+
+/* Ultilities */
+@import "./ultilities/html.css";
+@import "./ultilities/css.css";
+@import "./ultilities/js.css";
+
+/* Lessons */
+@import "./lessons/border.css";
+
+header {
+  background: black;
+  color: white;
+  padding-inline: 7px;
+}
+
+main {
+  padding: 10px;
+}
+
+nav {
+  padding: 10px;
+  background: lightgray;
+}
+
+.line-break {
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+}
