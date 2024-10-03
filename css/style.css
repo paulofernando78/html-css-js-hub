@@ -9,6 +9,9 @@
 
 /* Lessons */
 @import "./lessons/border.css";
+@import "./lessons/css-flex.css";
+@import "./lessons/css-grid.css";
+@import "./lessons/show-hide.css";
 
 header {
   background: black;
@@ -38,6 +41,11 @@ li {
   display: flex;
   flex-direction: column;
   gap: 1.125rem;
+}
+
+.flex {
+  display: flex;
+  gap: 8px;
 }
 
 .grid-2 {

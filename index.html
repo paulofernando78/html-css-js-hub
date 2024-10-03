@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <script defer type="module" src="./js/main.js"></script>
     <title>HTML - CSS - JS Hub</title>
   </head>
   <body>
@@ -134,15 +135,20 @@
       <hr />
 
       <!-- Show / Hide -->
-      <section id="show-hide" class="line-break">
-        <h2>Show / Hide Elements</h2>
+      <section id="show-hide" class="show-hide line-break">
+        <h2>Show / Hide</h2>
+        <div class="flex">
+          <button id="toggleButton">Click me!</button>
+          <div id="element">Hey there!</div>
+        </div>
         <div class="grid-3">
           <!-- HTML -->
           <div class="html">
             <p>HTML</p>
             <div class="html-code">
               <pre><code>
-&ltdiv class"..."&gt...&lt/div&gt
+&ltdiv id"toggleButton"&gtClick me!&lt/div&gt
+&ltdiv id"element"&gtHey there!!&lt/div&gt
                 </code></pre>
             </div>
           </div>
@@ -151,9 +157,17 @@
             <p>CSS</p>
             <div class="css-code">
               <pre><code>
-... {
-  ...
-  }
+.show-hide button {
+  width: 70px;
+  height:40px;
+}
+
+#element {
+  background: red;
+  width: fit-content;
+  padding: 10px;
+  display: none;
+}
                 </code></pre>
             </div>
           </div>
@@ -162,7 +176,22 @@
             <p>JS</p>
             <div class="css-code">
               <pre><code>
-...
+show-hide.js
+export function showHide(id) {
+  const element = document.getElementById(id)
+    if (element.style.display === "block") {
+      element.style.display = "none";
+    } else {
+      element.style.display = "block"
+    }
+}
+
+main.js
+import { showHide } from "./lessons/show-hide.js"
+
+document.getElementById("toggleButton").addEventListener("click", () => {
+    showHide("element")
+})
                 </code></pre>
             </div>
           </div>

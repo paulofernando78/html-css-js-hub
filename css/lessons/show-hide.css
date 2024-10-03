@@ -1,0 +1,11 @@
+#toggleButton {
+    width: 70px;
+    height:40px;
+}
+
+#element {
+    background: red;
+    width: fit-content;
+    padding: 10px;
+    display: none;
+}
