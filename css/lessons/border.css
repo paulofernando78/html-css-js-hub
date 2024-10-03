@@ -1,6 +1,14 @@
 .solid {
-  border-width: 1px;
+  border-width: 2px;
   border-style: solid;
+  border-color: black;
+  width: 100px;
+  height: 100px;
+}
+
+.dotted {
+  border-width: 2px;
+  border-style: dotted;
   border-color: black;
   width: 100px;
   height: 100px;

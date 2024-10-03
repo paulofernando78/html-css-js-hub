@@ -2,10 +2,10 @@
 @import "./global/reset.css";
 @import "./global/typography.css";
 
-/* Ultilities */
-@import "./ultilities/html.css";
-@import "./ultilities/css.css";
-@import "./ultilities/js.css";
+/* Components */
+@import "./components/html.css";
+@import "./components/css.css";
+@import "./components/js.css";
 
 /* Lessons */
 @import "./lessons/border.css";
@@ -14,6 +14,11 @@ header {
   background: black;
   color: white;
   padding-inline: 7px;
+}
+
+body {
+  max-width: 1519px;
+  margin: 0 auto;
 }
 
 main {
@@ -25,8 +30,36 @@ nav {
   background: lightgray;
 }
 
+li {
+  list-style: none;
+}
+
 .line-break {
   display: flex;
   flex-direction: column;
   gap: 1.125rem;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.grid-center {
+  display: grid;
+  place-items: center;
+}
+
+@media (width < 768px) {
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
 }

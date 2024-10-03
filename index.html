@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="./css/style.css" />
     <title>HTML - CSS - JS Hub</title>
   </head>
-  <body class="line-brea">
+  <body>
+    <!-- Header -->
     <header>
       <h1>HTML / CSS / JS Hub</h1>
     </header>
@@ -21,65 +22,116 @@
         <li><a href="#show-hide">Show / Hide</a></li>
       </ul>
     </nav>
-    <hr />
     <main class="line-break">
       <!-- Abbrevition <abbr> -->
       <section id="abbr" class="line-break">
-        <h3>Abbreviation &ltabbr&gt</h3>
+        <h2>Abbreviation &ltabbr&gt</h2>
         <div>
           <abbr title="Hyper Text MarkUp Language">HTML</abbr>
           <abbr title="Cascading Style Sheets">CSS</abbr>
           <abbr title="Javascript">JS</abbr>
         </div>
-        <!-- HTML -->
-        <div class="html">
-          <p>HTML</p>
-          <div class="html-code">
-            <pre><code>
-&ltabbr title="Hyper Text MarkUp Language"&gtHTML&lt/abbr&gt 
-            </code></pre>
+        <div class="grid">
+          <!-- HTML -->
+          <div class="html">
+            <p>HTML</p>
+            <div class="html-code">
+              <pre><code>
+&ltabbr title="Hyper Text MarkUp Language"&gtHTML&lt/abbr&gt
+&ltabbr title="Cascading Style Sheets"&gtCSS&lt/abbr&gt
+&ltabbr title="Javascript"&gtJS&lt/abbr&gt
+&ltabbr title="Javascript"&gtJS&lt/abbr&gt
+              </code></pre>
+            </div>
           </div>
         </div>
       </section>
       <hr />
+
       <!-- Border <border> -->
       <section id="border" class="line-break">
-        <h3>Border &ltborder&gt</h3>
-        <div>
-          <span>CSS</span>
-          <pre>
-              <code>
-  .border div {
-    border-width: 1px;
-    border-style: solid;
-    border-color: black;
-    width: 100px;
-    height: 100px;
-    }
-              </code>
-            </pre>
+        <h2>Border &ltborder&gt</h2>
+
+        <!-- Solid -->
+        <div class="solid grid-center"><p>Solid</p></div>
+        <div class="grid-2">
+          <!-- HTML -->
+          <div class="html">
+            <p>HTML</p>
+            <div class="html-code">
+              <pre><code>
+&ltdiv class"solid"&gtSolid&lt/div&gt
+              </code></pre>
+            </div>
+          </div>
+          <!-- CSS -->
+          <div class="css">
+            <p>CSS</p>
+            <div class="css-code">
+              <pre><code>
+.solid {
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  width: 100px;
+  height: 100px;
+  }
+              </code></pre>
+            </div>
+          </div>
         </div>
-        <h4>Solid</h4>
-        <div class="solid">...</div>
-        <h4>Effects</h4>
+
+        <!-- Dotted -->
+        <div class="dotted grid-center"><p>Dotted</p></div>
+        <div class="grid-2">
+          <!-- HTML -->
+          <div class="html">
+            <p>HTML</p>
+            <div class="html-code">
+              <pre><code>
+&ltdiv class="dotted"&gtDotted&lt/div&gt
+              </code></pre>
+            </div>
+          </div>
+          <!-- CSS -->
+          <div class="css">
+            <p>CSS</p>
+            <div class="css-code">
+              <pre><code>
+.dotted {
+  border-style: dotted;
+  border-width: 2px;
+  border-color: black;
+  width: 100px;
+  height: 100px;
+  }
+              </code></pre>
+            </div>
+          </div>
+        </div>
+
+        <h3>Effects</h3>
         <div>
           <p>...</p>
         </div>
       </section>
       <hr />
+
       <!-- CSS Flex -->
       <section id="css-flex">
-        <h3>CSS Flex</h3>
+        <h2>CSS Flex</h2>
       </section>
       <hr />
+
       <!-- CSS Grid -->
       <section id="css-grid">
-        <h3>CSS Grid</h3>
+        <h2>CSS Grid</h2>
       </section>
       <hr />
+
       <!-- Show / Hide -->
       <section id="show-hide">
-        <h3>Show / Hide Elements</h3>
+        <h2>Show / Hide Elements</h2>
       </section>
       <hr />
     </main>
