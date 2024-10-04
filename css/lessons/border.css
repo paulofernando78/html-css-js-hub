@@ -1,15 +1,20 @@
-.solid {
+.solid,
+.dotted,
+.dashed {
   border-width: 2px;
-  border-style: solid;
   border-color: black;
-  width: 100px;
-  height: 100px;
+  height: fit-content;
+  padding: 10px;
+}
+
+.solid {
+  border-style: solid;
 }
 
 .dotted {
-  border-width: 2px;
   border-style: dotted;
-  border-color: black;
-  width: 100px;
-  height: 100px;
+}
+
+.dashed {
+  border-style: dashed;
 }

@@ -55,7 +55,11 @@
 
         <!-- Solid -->
         <div class="grid-center">
-          <div class="solid grid-center"><p>Solid</p></div>
+          <div class="flex">
+            <div class="solid grid-center"><p>Solid</p></div>
+            <div class="dotted grid-center"><p>Dotted</p></div>
+            <div class="dashed grid-center"><p>Dashed</p></div>
+          </div>
         </div>
         <div class="grid-2">
           <!-- HTML -->
@@ -64,6 +68,8 @@
             <div class="html-code">
               <pre><code>
 &ltdiv class"solid"&gtSolid&lt/div&gt
+&ltdiv class"dotted"&gtSolid&lt/div&gt
+&ltdiv class"dashed"&gtSolid&lt/div&gt
                 </code></pre>
             </div>
           </div>
@@ -72,45 +78,27 @@
             <p>CSS</p>
             <div class="css-code">
               <pre><code>
+.solid,
+.dotted,
+.dashed {
+  border-width: 2px;
+  border-color: black;
+  height: fit-content;
+  padding: 10px;
+}
+
 .solid {
   border-style: solid;
-  border-width: 2px;
-  border-color: black;
-  width: 100px;
-  height: 100px;
-  }
-                </code></pre>
-            </div>
-          </div>
-        </div>
+}
 
-        <!-- Dotted -->
-        <div class="grid-center">
-          <div class="dotted grid-center"><p>Dotted</p></div>
-        </div>
-        <div class="grid-2">
-          <!-- HTML -->
-          <div class="html">
-            <p>HTML</p>
-            <div class="html-code">
-              <pre><code>
-&ltdiv class="dotted"&gtDotted&lt/div&gt
-              </code></pre>
-            </div>
-          </div>
-          <!-- CSS -->
-          <div class="css">
-            <p>CSS</p>
-            <div class="css-code">
-              <pre><code>
 .dotted {
   border-style: dotted;
-  border-width: 2px;
-  border-color: black;
-  width: 100px;
-  height: 100px;
-  }
-              </code></pre>
+}
+
+.dashed {
+  border-style: dashed;
+}
+                </code></pre>
             </div>
           </div>
         </div>
@@ -164,12 +152,12 @@
               <pre><code>
 <span class="file">button-show-hide.js</span>
 export function showHide(id) {
-const element = document.getElementById(id)
-if (element.style.display === "block") {
-element.style.display = "none";
-} else {
-element.style.display = "block"
-}
+  const element = document.getElementById(id)
+    if (element.style.display === "block") {
+        element.style.display = "none";
+    } else {
+        element.style.display = "block"
+    }
 }
 
 <span class="file">main.js</span>
