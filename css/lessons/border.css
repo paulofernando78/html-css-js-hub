@@ -1,10 +1,16 @@
 .solid,
 .dotted,
-.dashed {
+.dashed,
+.double,
+.groove,
+.ridge,
+.inset,
+.outset,
+.mix {
   border-width: 2px;
   border-color: black;
   height: fit-content;
-  padding: 10px;
+  padding: 5px;
 }
 
 .solid {
@@ -17,4 +23,28 @@
 
 .dashed {
   border-style: dashed;
+}
+
+.double {
+  border-style: double;
+}
+
+.groove {
+  border-style: groove;
+}
+
+.ridge {
+  border-style: ridge;
+}
+
+.inset {
+  border-style: inset;
+}
+
+.outset {
+  border-style: outset;
+}
+
+.mix {
+  border-style: solid dotted dashed double;
 }

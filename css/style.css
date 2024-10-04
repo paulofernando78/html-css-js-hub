@@ -60,6 +60,7 @@ li {
 .flex {
   display: flex;
   gap: 8px;
+  flex-wrap: wrap;
 }
 
 .grid-2 {
