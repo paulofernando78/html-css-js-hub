@@ -1,0 +1,9 @@
+#toggleButton {
+  padding: 10px;
+}
+
+#element {
+  background: red;
+  display: none;
+  padding: 10px;
+}

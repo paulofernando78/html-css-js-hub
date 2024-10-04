@@ -14,7 +14,6 @@
     </header>
     <!-- Jump to: -->
     <nav class="line-break">
-      <p><strong>Jump to:</strong></p>
       <ul>
         <li><a href="#abbr">Abbreviation &ltabbr&gt</a></li>
         <li><a href="#border">Border &ltborder&gt</a></li>
@@ -134,9 +133,9 @@
       </section>
       <hr />
 
-      <!-- Show / Hide -->
-      <section id="show-hide" class="show-hide line-break">
-        <h2>Show / Hide</h2>
+      <!-- Button Show / Hide -->
+      <section class="line-break">
+        <h2>Button Show / Hide</h2>
         <div class="flex">
           <button id="toggleButton">Click me!</button>
           <div id="element">Hey there!</div>
@@ -157,16 +156,14 @@
             <p>CSS</p>
             <div class="css-code">
               <pre><code>
-.show-hide button {
-  width: 70px;
-  height:40px;
+#toggleButton {
+  padding: 10px;
 }
 
 #element {
   background: red;
-  width: fit-content;
-  padding: 10px;
   display: none;
+  padding: 10px;
 }
                 </code></pre>
             </div>
@@ -176,7 +173,7 @@
             <p>JS</p>
             <div class="css-code">
               <pre><code>
-show-hide.js
+<span class="file">button-show-hide.js</span>
 export function showHide(id) {
   const element = document.getElementById(id)
     if (element.style.display === "block") {
@@ -186,15 +183,19 @@ export function showHide(id) {
     }
 }
 
-main.js
+<span class="file">main.js</span>
 import { showHide } from "./lessons/show-hide.js"
 
 document.getElementById("toggleButton").addEventListener("click", () => {
-    showHide("element")
+  showHide("element")
 })
                 </code></pre>
             </div>
           </div>
+        </div>
+        <div class="note">
+          <p>You don't need the onclick attribute in the HTML because you are already adding an event listener in your JavaScript. The addEventListener method is a better practice since it separates HTML from JavaScript logic, keeping your code cleaner and more maintainable.</p>
+          <p>Using an event listener is generally preferred because it provides better separation of concerns. It's also more flexible, allowing you to attach multiple listeners to the same element, whereas onclick replaces any existing inline event handler.</p>
         </div>
       </section>
       <hr />

@@ -11,7 +11,7 @@
 @import "./lessons/border.css";
 @import "./lessons/css-flex.css";
 @import "./lessons/css-grid.css";
-@import "./lessons/show-hide.css";
+@import "./lessons/button-show-hide.css";
 
 header {
   background: black;
@@ -35,6 +35,19 @@ nav {
 
 li {
   list-style: none;
+}
+
+.file {
+  font-family: 'Courier New', Courier, monospace , serif;
+  text-decoration: underline;
+  font-size: .8rem;
+}
+
+.note {
+  background-color: lightgray;
+  padding: 5px;
+  border-radius: 5px;
+
 }
 
 .line-break {
