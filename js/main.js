@@ -1,5 +1,5 @@
 import { showHide } from "./lessons/button-show-hide.js";
 
-document.getElementById("toggleButton").addEventListener("click", () => {
+document.getElementById("toggle-button").addEventListener("click", () => {
   showHide("element");
 });

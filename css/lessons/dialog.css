@@ -1,0 +1,9 @@
+#dialog-button {
+    width: fit-content;
+}
+
+dialog {
+    width: 400px;
+    height: 200px;
+    border-radius: 5px;
+}

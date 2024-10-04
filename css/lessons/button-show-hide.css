@@ -1,9 +1,6 @@
-#toggleButton {
-  padding: 10px;
-}
-
 #element {
-  background: red;
   display: none;
+  background: red;
   padding: 10px;
+  width: fit-content;
 }

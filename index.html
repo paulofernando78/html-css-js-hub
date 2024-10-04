@@ -19,6 +19,7 @@
         <li><a href="#border">Border &ltborder&gt</a></li>
         <li><a href="#button-show-hide">Button Show / Hide</a></li>
         <li><a href="#data-list">Data List &ltdatalist&gt</a></li>
+        <li><a href="#dialog">Dialog &ltdialog&gt</a></li>
         <li><a href="#kbd">Keyboard &ltkbd&gt</a></li>
       </ul>
     </nav>
@@ -118,10 +119,8 @@
       <!-- Button Show / Hide -->
       <section id="button-show-hide" class="line-break">
         <h2>Button Show / Hide</h2>
-        <div class="flex">
-          <button id="toggleButton">Click me!</button>
-          <div id="element">Hey there!</div>
-        </div>
+        <button id="toggle-button">Click me!</button>
+        <div id="element">Hey there!</div>
         <div class="grid-3">
           <!-- HTML -->
           <div class="html">
@@ -138,14 +137,11 @@
             <p>CSS</p>
             <div class="css-code">
               <pre><code>
-#toggleButton {
-  adding: 10px;
-}
-
 #element {
-  background: red;
   display: none;
+  background: red;
   padding: 10px;
+  width: fit-content;
 }
           </code></pre>
             </div>
@@ -217,6 +213,37 @@ kbd {
   border: 1px solid #ccc;
   border-radius: 3px;
   padding: 2px 4px;
+}
+                </code></pre>
+            </div>
+          </div>
+        </div>
+        <p class="note">By default, &ltkbd&gt inherets the font monospace.</p>
+      </section>
+      <hr />
+
+      <!-- Dialog <dialog> -->
+      <section id="dialog" class="line-break">
+        <h2>Dialog &ltdialog&gt</h2>
+        <button id="button">Open dialog</button>
+        <!-- <dialog open="" class="grid-center">This is a dialog box!</dialog> -->
+        <div class="grid-2">
+          <!-- HTML -->
+          <div class="html">
+            <p>HTML</p>
+            <div class="html-code">
+              <pre><code>
+&ltp&gtTo save the file, press &ltkbd&gtCtrl&lt/kbd&gt + &ltkbd&gtS&lt/kbd&gt.&ltp&gt
+                </code></pre>
+            </div>
+          </div>
+          <!-- CSS -->
+          <div class="css">
+            <p>CSS</p>
+            <div class="css-code">
+              <pre><code>
+dialog {
+  ...
 }
                 </code></pre>
             </div>

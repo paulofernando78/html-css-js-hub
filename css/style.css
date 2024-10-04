@@ -6,12 +6,14 @@
 @import "./components/html.css";
 @import "./components/css.css";
 @import "./components/js.css";
+@import "./components/button.css";
 
 /* Lessons */
 @import "./lessons/css-flex.css";
 @import "./lessons/css-grid.css";
 @import "./lessons/border.css";
 @import "./lessons/button-show-hide.css";
+@import "./lessons/dialog.css";
 @import "./lessons/kgb.css";
 
 header {
