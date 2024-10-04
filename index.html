@@ -12,14 +12,15 @@
     <header>
       <h1>HTML / CSS / JS Hub</h1>
     </header>
-    <!-- Jump to: -->
+    <!-- Nav -->
     <nav class="line-break">
       <ul>
         <li><a href="#abbr">Abbreviation &ltabbr&gt</a></li>
         <li><a href="#border">Border &ltborder&gt</a></li>
+        <li><a href="#button-show-hide">Button Show / Hide</a></li>
+        <li><a href="#kbd">Keyboard &ltkbd&gt</a></li>
         <li><a href="#css-flex">CSS Flex</a></li>
         <li><a href="#css-grid">CSS Grid</a></li>
-        <li><a href="#show-hide">Show / Hide</a></li>
       </ul>
     </nav>
     <main class="line-break">
@@ -62,7 +63,7 @@
             <p>HTML</p>
             <div class="html-code">
               <pre><code>
-  &ltdiv class"solid"&gtSolid&lt/div&gt
+&ltdiv class"solid"&gtSolid&lt/div&gt
                 </code></pre>
             </div>
           </div>
@@ -71,13 +72,13 @@
             <p>CSS</p>
             <div class="css-code">
               <pre><code>
-  .solid {
-    border-style: solid;
-    border-width: 2px;
-    border-color: black;
-    width: 100px;
-    height: 100px;
-    }
+.solid {
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  width: 100px;
+  height: 100px;
+  }
                 </code></pre>
             </div>
           </div>
@@ -121,20 +122,8 @@
       </section>
       <hr />
 
-      <!-- CSS Flex -->
-      <section id="css-flex">
-        <h2>CSS Flex</h2>
-      </section>
-      <hr />
-
-      <!-- CSS Grid -->
-      <section id="css-grid">
-        <h2>CSS Grid</h2>
-      </section>
-      <hr />
-
       <!-- Button Show / Hide -->
-      <section class="line-break">
+      <section id="button-show-hide" class="line-break">
         <h2>Button Show / Hide</h2>
         <div class="flex">
           <button id="toggleButton">Click me!</button>
@@ -148,7 +137,7 @@
               <pre><code>
 &ltdiv id"toggleButton"&gtClick me!&lt/div&gt
 &ltdiv id"element"&gtHey there!!&lt/div&gt
-                </code></pre>
+          </code></pre>
             </div>
           </div>
           <!-- CSS -->
@@ -157,7 +146,7 @@
             <div class="css-code">
               <pre><code>
 #toggleButton {
-  padding: 10px;
+  adding: 10px;
 }
 
 #element {
@@ -165,7 +154,7 @@
   display: none;
   padding: 10px;
 }
-                </code></pre>
+          </code></pre>
             </div>
           </div>
           <!-- JS -->
@@ -175,28 +164,82 @@
               <pre><code>
 <span class="file">button-show-hide.js</span>
 export function showHide(id) {
-  const element = document.getElementById(id)
-    if (element.style.display === "block") {
-      element.style.display = "none";
-    } else {
-      element.style.display = "block"
-    }
+const element = document.getElementById(id)
+if (element.style.display === "block") {
+element.style.display = "none";
+} else {
+element.style.display = "block"
+}
 }
 
 <span class="file">main.js</span>
 import { showHide } from "./lessons/show-hide.js"
 
 document.getElementById("toggleButton").addEventListener("click", () => {
-  showHide("element")
+showHide("element")
 })
-                </code></pre>
+          </code></pre>
             </div>
           </div>
         </div>
         <div class="note">
-          <p>You don't need the onclick attribute in the HTML because you are already adding an event listener in your JavaScript. The addEventListener method is a better practice since it separates HTML from JavaScript logic, keeping your code cleaner and more maintainable.</p>
-          <p>Using an event listener is generally preferred because it provides better separation of concerns. It's also more flexible, allowing you to attach multiple listeners to the same element, whereas onclick replaces any existing inline event handler.</p>
+          <p>
+            You don't need the onclick attribute in the HTML because you are
+            already adding an event listener in your JavaScript. The
+            addEventListener method is a better practice since it separates HTML
+            from JavaScript logic, keeping your code cleaner and more
+            maintainable.
+          </p>
+          <p>
+            Using an event listener is generally preferred because it provides
+            better separation of concerns. It's also more flexible, allowing you
+            to attach multiple listeners to the same element, whereas onclick
+            replaces any existing inline event handler.
+          </p>
         </div>
+      </section>
+      <hr />
+
+      <!-- kbd -->
+      <section id="kbd" class="line-break">
+        <h2>Keyboard &ltkbd&gt</h2>
+        <p>To save the file, press <kbd>Ctrl</kbd> + <kbd>S</kbd>.</p>
+        <div class="grid-2">
+          <!-- HTML -->
+          <div class="html">
+            <p>HTML</p>
+            <div class="html-code">
+              <pre><code>
+&ltp&gtTo save the file, press &ltkbd&gtCtrl&lt/kbd&gt + &ltkbd&gtS&lt/kbd&gt.&ltp&gt
+                </code></pre>
+            </div>
+          </div>
+          <!-- CSS -->
+          <div class="css">
+            <p>CSS</p>
+            <div class="css-code">
+              <pre><code>
+.kbd {
+  ...
+}
+                </code></pre>
+            </div>
+          </div>
+          
+        </div>
+        <p class="note">By default, &ltkbd&gt inherets the font monospace.</p>
+      </section>
+      <hr />
+
+      <!-- CSS Flex -->
+      <section id="css-flex">
+        <h2>CSS Flex</h2>
+      </section>
+      <hr />
+
+      <!-- CSS Grid -->
+      <section id="css-grid">
+        <h2>CSS Grid</h2>
       </section>
       <hr />
     </main>
