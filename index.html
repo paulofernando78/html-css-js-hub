@@ -190,6 +190,54 @@ showHide("element")
       <hr />
 
       <!-- Data List <datalist> -->
+      <section id="data-list" class="line-break">
+        <h2>Data List &ltdatalist&gt</h2>
+        <div>
+          <p>Search for cities.</p>
+          <input type="input" list="cities" />
+        </div>
+        <datalist id="cities">
+          <option value="Amsterdam"></option>
+          <option value="Liverpool"></option>
+          <option value="Los Angeles"></option>
+          <option value="New York"></option>
+          <option value="Sao Paulo"></option>
+          <option value="Tokyo"></option>
+        </datalist>
+        <div class="grid-2">
+          <!-- HTML -->
+          <div class="html">
+            <p>HTML</p>
+            <div class="html-code">
+              <pre><code>
+&ltinput type=input list=cities /&gt
+&ltdatalist id="cities" /&gt
+  &ltoption value="Amsterdam"&gt&lt/option&gt
+  &ltoption value="Liverpool"&gt&lt/option&gt
+  &ltoption value="Los Angeles"&gt&lt/option&gt
+  &ltoption value="New York"&gt&lt/option&gt
+  &ltoption value="Sao Paulo"&gt&lt/option&gt
+  &ltoption value="Tokyo"&gt&lt/option&gt
+                  </code></pre>
+            </div>
+          </div>
+          <!-- CSS -->
+          <div class="css">
+            <p>CSS</p>
+            <div class="css-code">
+              <pre><code>
+  datalist {
+    
+  }
+                  </code></pre>
+            </div>
+          </div>
+        </div>
+        <p class="note">By default, &ltkbd&gt inherets the font monospace.</p>
+      </section>
+      <hr />
+
+      <!-- Keyboard <kbd> -->
       <section id="kbd" class="line-break">
         <h2>Keyboard &ltkbd&gt</h2>
         <p>To save the file, press <kbd>Ctrl</kbd> + <kbd>S</kbd>.</p>
@@ -222,19 +270,20 @@ kbd {
       </section>
       <hr />
 
-      <!-- Dialog <dialog> -->
-      <section id="dialog" class="line-break">
-        <h2>Dialog &ltdialog&gt</h2>
+      <!-- Modal <dialog> -->
+      <section id="dialog-modal" class="line-break">
+        <h2>Modal &ltdialog&gt</h2>
+        <p>1. open</p>
         <button id="button">Open dialog</button>
-        <!-- <dialog open="" class="grid-center">This is a dialog box!</dialog> -->
+        <!-- <dialog open class="grid-center">This is a dialog box!</dialog> -->
         <div class="grid-2">
           <!-- HTML -->
           <div class="html">
             <p>HTML</p>
             <div class="html-code">
               <pre><code>
-&ltp&gtTo save the file, press &ltkbd&gtCtrl&lt/kbd&gt + &ltkbd&gtS&lt/kbd&gt.&ltp&gt
-                </code></pre>
+  &ltp&gtTo save the file, press &ltkbd&gtCtrl&lt/kbd&gt + &ltkbd&gtS&lt/kbd&gt.&ltp&gt
+              </code></pre>
             </div>
           </div>
           <!-- CSS -->
@@ -242,58 +291,10 @@ kbd {
             <p>CSS</p>
             <div class="css-code">
               <pre><code>
-dialog {
+  dialog {
   ...
-}
-                </code></pre>
-            </div>
-          </div>
-        </div>
-        <p class="note">By default, &ltkbd&gt inherets the font monospace.</p>
-      </section>
-      <hr />
-
-      <!-- Keyboard <kbd> -->
-      <section id="data-list" class="line-break">
-        <h2>Data List &ltdatalist&gt</h2>
-        <div>
-          <p>Search for cities.</p>
-          <input type="input" list="cities" />
-        </div>
-        <datalist id="cities">
-          <option value="Amsterdam"></option>
-          <option value="Liverpool"></option>
-          <option value="Los Angeles"></option>
-          <option value="New York"></option>
-          <option value="Sao Paulo"></option>
-          <option value="Tokyo"></option>
-        </datalist>
-        <div class="grid-2">
-          <!-- HTML -->
-          <div class="html">
-            <p>HTML</p>
-            <div class="html-code">
-              <pre><code>
-&ltinput type=input list=cities /&gt
-&ltdatalist id="cities" /&gt
-  &ltoption value="Amsterdam"&gt&lt/option&gt
-  &ltoption value="Liverpool"&gt&lt/option&gt
-  &ltoption value="Los Angeles"&gt&lt/option&gt
-  &ltoption value="New York"&gt&lt/option&gt
-  &ltoption value="Sao Paulo"&gt&lt/option&gt
-  &ltoption value="Tokyo"&gt&lt/option&gt
-                </code></pre>
-            </div>
-          </div>
-          <!-- CSS -->
-          <div class="css">
-            <p>CSS</p>
-            <div class="css-code">
-              <pre><code>
-datalist {
-  
-}
-                </code></pre>
+  }
+              </code></pre>
             </div>
           </div>
         </div>

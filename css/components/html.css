@@ -12,9 +12,7 @@
   border-radius: 0 5px 5px 5px;
   background: #1D1E22;
   color: white;
-  overflow: hidden;
   padding-inline: 10px;
-  overflow-x: auto;
   max-height: 250px;
-  overflow-y: auto;
+  overflow-x: auto;
 }
