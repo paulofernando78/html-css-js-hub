@@ -4,7 +4,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: 1519px;
-  width: 90%;
   padding: 10px;
 }
 
@@ -13,5 +12,5 @@
 }
 
 .modal::backdrop {
-  background: rgb(0 0 0 / 0.4);
+  background: rgba(0, 0, 0, 0.5);
 }

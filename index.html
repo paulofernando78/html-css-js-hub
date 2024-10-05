@@ -32,7 +32,7 @@
           <abbr title="Cascading Style Sheets">CSS</abbr>
           <abbr title="Javascript">JS</abbr>
         </div>
-        <div class="grid">
+        <div class="line-break">
           <!-- HTML -->
           <div class="html">
             <p>HTML</p>
@@ -44,6 +44,15 @@
 &ltabbr title="Javascript"&gtJS&lt/abbr&gt
               </code></pre>
             </div>
+          </div>
+          <!-- Notes -->
+          <div class="note line-break">
+            <p><strong>Notes</strong></p>
+            <p>
+              By default, it displays an abbreviation or acronym, and when you
+              hover over it (on desktop), a tooltip shows the full form of the
+              abbreviation, defined bu the <kbd>title</kbd> attribute.
+            </p>
           </div>
         </div>
       </section>
@@ -299,7 +308,7 @@ kbd {
         <h2>Modal &ltdialog&gt</h2>
         <button id="open-modal">Open Modal</button>
         <dialog class="modal" id="modal">
-          <p>This is a Modal! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad quas temporibus numquam, quo praesentium fugiat incidunt fuga eius commodi explicabo quaerat ducimus sed quidem cum illo corporis ut rerum quibusdam iusto vitae eaque. Nam dolores atque temporibus eum illo ad dolorum fuga? Sit eaque nisi dicta, ipsa molestiae vero minus voluptates aspernatur, rem sed consequuntur, totam quisquam reprehenderit rerum non ut voluptatem cumque expedita in? Nesciunt consectetur eveniet sed hic sapiente, voluptatem commodi maiores laboriosam nemo praesentium saepe recusandae reiciendis qui adipisci dicta, vitae delectus. Alias laboriosam unde velit, fugiat nostrum earum cupiditate rerum incidunt optio dignissimos eum vero saepe reiciendis sed! Labore, repellat expedita dolor adipisci facilis numquam debitis velit suscipit voluptate. Error incidunt, ipsum doloremque veniam nostrum repudiandae exercitationem harum ad voluptatibus a deserunt illo fugit pariatur. Esse cumque, eum eveniet facilis labore aliquid dolore magni vero vel inventore culpa neque deleniti quae minima. Ipsa cumque corrupti tempore temporibus dolorem labore vitae non reiciendis error ea exercitationem architecto tenetur voluptas beatae qui, similique mollitia omnis quam vel debitis? Mollitia enim itaque veritatis maxime quas fugiat ipsum obcaecati voluptatibus tempore ullam? Iste nobis, a suscipit excepturi voluptatum minima obcaecati. Neque possimus accusantium, voluptate unde sint culpa. Dolorum rem ipsam labore ducimus temporibus eos beatae architecto hic delectus itaque, ut et impedit repudiandae nostrum provident maiores quae excepturi, quasi voluptatum veniam velit. Praesentium, vero nam, nihil repudiandae, dolor voluptatum cumque labore iusto soluta illo quas voluptates. Atque et sint, deleniti exercitationem tempora tempore aut repudiandae quis at nostrum eius distinctio cumque nihil, libero animi amet quibusdam odit labore dignissimos ipsa dicta modi veritatis eligendi iusto. Vero dolores molestiae quae rerum recusandae placeat sequi enim aspernatur sint ratione, iure nulla fuga ducimus similique, impedit vitae delectus, saepe tenetur distinctio earum? Saepe maiores illo quam culpa eligendi eveniet assumenda vitae vel perferendis esse odio inventore quos expedita necessitatibus, neque aliquid beatae quasi quaerat cupiditate magni quidem minus excepturi! Hic impedit id quas vero! Et corrupti recusandae, iure excepturi debitis incidunt ipsa nemo vitae, quod numquam dolores quis. Fugiat neque nostrum ducimus officiis tenetur rem dicta qui illum aliquid, non suscipit et quaerat fuga recusandae commodi veniam doloribus temporibus. Aspernatur exercitationem quo quae totam in iste debitis possimus deserunt. Nobis repellat reiciendis eius id sequi modi qui maxime dolores! Facere ducimus quia repellendus placeat nihil, harum dicta unde ullam, provident accusamus obcaecati aut dolorem distinctio esse non enim ut illum sit omnis saepe, ea consequuntur earum. Cupiditate temporibus velit quidem illo fugiat doloribus impedit odio amet itaque asperiores eos, voluptatem ipsam veritatis unde eius dicta architecto maxime ipsum obcaecati accusantium ea fugit et at rerum. Corporis dolor nemo, minus nisi non similique impedit. Quisquam laborum adipisci neque labore delectus. Similique accusamus voluptate atque repudiandae esse ad temporibus corporis amet? Commodi provident maxime voluptatem debitis illum sint consequuntur blanditiis vitae unde, recusandae dicta, dignissimos in nemo. Saepe quidem quibusdam doloremque officia natus facilis vitae porro aperiam temporibus odio, in reiciendis suscipit blanditiis dolorem quis, obcaecati maiores voluptas culpa quod modi libero laudantium cum perferendis.</p>
+          <p>This is a Modal!</p>
           <button id="close-modal">Close</button>
         </dialog>
         <div class="grid-2">
@@ -321,21 +330,34 @@ kbd {
             <div class="css-code">
               <pre><code>
 .modal {
-  ...
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1519px;
+  padding: 10px;
+}
+
+.modal p {
+  margin-bottom: 1.125rem;
+}
+
+.modal::backdrop {
+  background: rgba(0, 0, 0, 0.5);
 }
               </code></pre>
             </div>
           </div>
-          <!-- Notes -->
-          <div class="note line-break">
-            <p><strong>Notes</strong></p>
-            <div>
-              <p>
-                By default, pressing the Esc <strong>key</strong> will close the
-                modal "dialog".
-              </p>
-              <p>Use <kbd>method=dialog</kbd> with forms.</p>
-            </div>
+        </div>
+        <!-- Notes -->
+        <div class="note line-break">
+          <p><strong>Notes</strong></p>
+          <div>
+            <p>
+              By default, pressing the Esc <strong>key</strong> will close the
+              modal "dialog".
+            </p>
+            <p>Use <kbd>method=dialog</kbd> with forms.</p>
           </div>
         </div>
       </section>
