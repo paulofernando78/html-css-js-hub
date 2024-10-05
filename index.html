@@ -19,7 +19,7 @@
         <li><a href="#border">Border &ltborder&gt</a></li>
         <li><a href="#button-show-hide">Button Show / Hide</a></li>
         <li><a href="#data-list">Data List &ltdatalist&gt</a></li>
-        <li><a href="#dialog">Dialog &ltdialog&gt</a></li>
+        <li><a href="#modal-dialog">Modal &ltdialog&gt</a></li>
         <li><a href="#kbd">Keyboard &ltkbd&gt</a></li>
       </ul>
     </nav>
@@ -52,8 +52,6 @@
       <!-- Border <border> -->
       <section id="border" class="line-break">
         <h2>Border &ltborder&gt</h2>
-
-        <!-- Solid -->
         <div class="grid-center">
           <div class="flex">
             <div class="solid grid-center"><p>solid</p></div>
@@ -73,9 +71,15 @@
             <p>HTML</p>
             <div class="html-code">
               <pre><code>
-&ltdiv class"solid"&gtSolid&lt/div&gt
-&ltdiv class"dotted"&gtSolid&lt/div&gt
-&ltdiv class"dashed"&gtSolid&lt/div&gt
+&ltdiv class"solid"&gtsolid&lt/div&gt
+&ltdiv class"dotted"&gtdotted&lt/div&gt
+&ltdiv class"dashed"&gtdashed&lt/div&gt
+&ltdiv class"double"&gtdouble&lt/div&gt
+&ltdiv class"groove"&gtgroove&lt/div&gt
+&ltdiv class"ridge"&gtridge&lt/div&gt
+&ltdiv class"inset"&gtinset&lt/div&gt
+&ltdiv class"outset"&gtoutset&lt/div&gt
+&ltdiv class"mix"&gtsolid dotted dashed double&lt/div&gt
                 </code></pre>
             </div>
           </div>
@@ -104,6 +108,30 @@
 .dashed {
   border-style: dashed;
 }
+
+.double {
+  border-style: double;
+}
+
+.groove {
+  border-style: groove;
+}
+
+.ridge {
+  border-style: ridge;
+}
+
+.inset {
+  border-style: inset;
+}
+
+.outset {
+  border-style: outset;
+}
+
+.mix {
+  border-style: solid dotted dashed double;
+}
                 </code></pre>
             </div>
           </div>
@@ -127,7 +155,7 @@
             <p>HTML</p>
             <div class="html-code">
               <pre><code>
-&ltdiv id"toggleButton"&gtClick me!&lt/div&gt
+&ltbutton id"toggle-button"&gtClick me!&lt/button&gt
 &ltdiv id"element"&gtHey there!!&lt/div&gt
           </code></pre>
             </div>
@@ -151,6 +179,13 @@
             <p>JS</p>
             <div class="css-code">
               <pre><code>
+<span class="file">main.js</span>
+import { showHide } from "./lessons/show-hide.js"
+                
+document.getElementById("toggle-button").addEventListener("click", () => {
+showHide("element")
+})
+
 <span class="file">button-show-hide.js</span>
 export function showHide(id) {
   const element = document.getElementById(id);
@@ -161,17 +196,14 @@ export function showHide(id) {
   }
 }
 
-<span class="file">main.js</span>
-import { showHide } from "./lessons/show-hide.js"
 
-document.getElementById("toggleButton").addEventListener("click", () => {
-showHide("element")
-})
           </code></pre>
             </div>
           </div>
         </div>
-        <div class="note">
+        <!-- Notes -->
+        <div class="note line-break">
+          <p><strong>Notes</strong></p>
           <p>
             You don't need the onclick attribute in the HTML because you are
             already adding an event listener in your JavaScript. The
@@ -204,7 +236,7 @@ showHide("element")
           <option value="Sao Paulo"></option>
           <option value="Tokyo"></option>
         </datalist>
-        <div class="grid-2">
+        <div>
           <!-- HTML -->
           <div class="html">
             <p>HTML</p>
@@ -221,19 +253,7 @@ showHide("element")
                   </code></pre>
             </div>
           </div>
-          <!-- CSS -->
-          <div class="css">
-            <p>CSS</p>
-            <div class="css-code">
-              <pre><code>
-  datalist {
-    
-  }
-                  </code></pre>
-            </div>
-          </div>
         </div>
-        <p class="note">By default, &ltkbd&gt inherets the font monospace.</p>
       </section>
       <hr />
 
@@ -247,7 +267,7 @@ showHide("element")
             <p>HTML</p>
             <div class="html-code">
               <pre><code>
-&ltp&gtTo save the file, press &ltkbd&gtCtrl&lt/kbd&gt + &ltkbd&gtS&lt/kbd&gt.&ltp&gt
+&ltp&gtTo save the file, press &ltkbd&gtCtrl&lt/kbd&gt + &ltkbd&gtS&lt/kbd&gt.&lt/p&gt
                 </code></pre>
             </div>
           </div>
@@ -266,23 +286,32 @@ kbd {
             </div>
           </div>
         </div>
-        <p class="note">By default, &ltkbd&gt inherets the font monospace.</p>
+        <!-- Notes -->
+        <div class="note line-break">
+          <p><strong>Notes</strong></p>
+          <p>By default, &ltkbd&gt inherets the font monospace.</p>
+        </div>
       </section>
       <hr />
 
       <!-- Modal <dialog> -->
-      <section id="dialog-modal" class="line-break">
+      <section id="modal-dialog" class="line-break">
         <h2>Modal &ltdialog&gt</h2>
-        <p>1. open</p>
-        <button id="button">Open dialog</button>
-        <!-- <dialog open class="grid-center">This is a dialog box!</dialog> -->
+        <button id="open-modal">Open Modal</button>
+        <dialog class="modal" id="modal">
+          <p>This is a Modal! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad quas temporibus numquam, quo praesentium fugiat incidunt fuga eius commodi explicabo quaerat ducimus sed quidem cum illo corporis ut rerum quibusdam iusto vitae eaque. Nam dolores atque temporibus eum illo ad dolorum fuga? Sit eaque nisi dicta, ipsa molestiae vero minus voluptates aspernatur, rem sed consequuntur, totam quisquam reprehenderit rerum non ut voluptatem cumque expedita in? Nesciunt consectetur eveniet sed hic sapiente, voluptatem commodi maiores laboriosam nemo praesentium saepe recusandae reiciendis qui adipisci dicta, vitae delectus. Alias laboriosam unde velit, fugiat nostrum earum cupiditate rerum incidunt optio dignissimos eum vero saepe reiciendis sed! Labore, repellat expedita dolor adipisci facilis numquam debitis velit suscipit voluptate. Error incidunt, ipsum doloremque veniam nostrum repudiandae exercitationem harum ad voluptatibus a deserunt illo fugit pariatur. Esse cumque, eum eveniet facilis labore aliquid dolore magni vero vel inventore culpa neque deleniti quae minima. Ipsa cumque corrupti tempore temporibus dolorem labore vitae non reiciendis error ea exercitationem architecto tenetur voluptas beatae qui, similique mollitia omnis quam vel debitis? Mollitia enim itaque veritatis maxime quas fugiat ipsum obcaecati voluptatibus tempore ullam? Iste nobis, a suscipit excepturi voluptatum minima obcaecati. Neque possimus accusantium, voluptate unde sint culpa. Dolorum rem ipsam labore ducimus temporibus eos beatae architecto hic delectus itaque, ut et impedit repudiandae nostrum provident maiores quae excepturi, quasi voluptatum veniam velit. Praesentium, vero nam, nihil repudiandae, dolor voluptatum cumque labore iusto soluta illo quas voluptates. Atque et sint, deleniti exercitationem tempora tempore aut repudiandae quis at nostrum eius distinctio cumque nihil, libero animi amet quibusdam odit labore dignissimos ipsa dicta modi veritatis eligendi iusto. Vero dolores molestiae quae rerum recusandae placeat sequi enim aspernatur sint ratione, iure nulla fuga ducimus similique, impedit vitae delectus, saepe tenetur distinctio earum? Saepe maiores illo quam culpa eligendi eveniet assumenda vitae vel perferendis esse odio inventore quos expedita necessitatibus, neque aliquid beatae quasi quaerat cupiditate magni quidem minus excepturi! Hic impedit id quas vero! Et corrupti recusandae, iure excepturi debitis incidunt ipsa nemo vitae, quod numquam dolores quis. Fugiat neque nostrum ducimus officiis tenetur rem dicta qui illum aliquid, non suscipit et quaerat fuga recusandae commodi veniam doloribus temporibus. Aspernatur exercitationem quo quae totam in iste debitis possimus deserunt. Nobis repellat reiciendis eius id sequi modi qui maxime dolores! Facere ducimus quia repellendus placeat nihil, harum dicta unde ullam, provident accusamus obcaecati aut dolorem distinctio esse non enim ut illum sit omnis saepe, ea consequuntur earum. Cupiditate temporibus velit quidem illo fugiat doloribus impedit odio amet itaque asperiores eos, voluptatem ipsam veritatis unde eius dicta architecto maxime ipsum obcaecati accusantium ea fugit et at rerum. Corporis dolor nemo, minus nisi non similique impedit. Quisquam laborum adipisci neque labore delectus. Similique accusamus voluptate atque repudiandae esse ad temporibus corporis amet? Commodi provident maxime voluptatem debitis illum sint consequuntur blanditiis vitae unde, recusandae dicta, dignissimos in nemo. Saepe quidem quibusdam doloremque officia natus facilis vitae porro aperiam temporibus odio, in reiciendis suscipit blanditiis dolorem quis, obcaecati maiores voluptas culpa quod modi libero laudantium cum perferendis.</p>
+          <button id="close-modal">Close</button>
+        </dialog>
         <div class="grid-2">
           <!-- HTML -->
           <div class="html">
             <p>HTML</p>
             <div class="html-code">
               <pre><code>
-  &ltp&gtTo save the file, press &ltkbd&gtCtrl&lt/kbd&gt + &ltkbd&gtS&lt/kbd&gt.&ltp&gt
+&ltdialog&gt
+  &ltp&gtThis is a modal!&lt/p&gt
+  &ltbutton&gtClose
+&lt/dialog&gt
               </code></pre>
             </div>
           </div>
@@ -291,14 +320,24 @@ kbd {
             <p>CSS</p>
             <div class="css-code">
               <pre><code>
-  dialog {
+.modal {
   ...
-  }
+}
               </code></pre>
             </div>
           </div>
+          <!-- Notes -->
+          <div class="note line-break">
+            <p><strong>Notes</strong></p>
+            <div>
+              <p>
+                By default, pressing the Esc <strong>key</strong> will close the
+                modal "dialog".
+              </p>
+              <p>Use <kbd>method=dialog</kbd> with forms.</p>
+            </div>
+          </div>
         </div>
-        <p class="note">By default, &ltkbd&gt inherets the font monospace.</p>
       </section>
       <hr />
     </main>

@@ -9,12 +9,10 @@
 @import "./components/button.css";
 
 /* Lessons */
-@import "./lessons/css-flex.css";
-@import "./lessons/css-grid.css";
 @import "./lessons/border.css";
 @import "./lessons/button-show-hide.css";
-@import "./lessons/dialog.css";
-@import "./lessons/kgb.css";
+@import "./lessons/modal.css";
+@import "./lessons/keyboard.css";
 
 header {
   background: black;
@@ -38,6 +36,10 @@ nav {
 
 li {
   list-style: none;
+}
+
+kbd {
+  border-radius: 5px;
 }
 
 .file {
