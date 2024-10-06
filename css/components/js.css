@@ -7,12 +7,3 @@
   padding: 3px 10px 0 10px;
   width: fit-content;
 }
-
-.js-code {
-  border-radius: 0 5px 5px 5px;
-  background: #1d1e22;
-  color: white;
-  padding-inline: 10px;
-  max-height: 250px;
-  overflow-x: auto;
-}

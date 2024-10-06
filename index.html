@@ -12,6 +12,18 @@
     <header>
       <h1>HTML / CSS / JS Hub</h1>
     </header>
+    <!-- Important notes -->
+    <div class="important-notes line-break">
+      <p><strong>Important Notes</strong></p>
+      <ul>
+        <li>Learn how to create snippets</li>
+        <li>Install important extensions</li>
+        <li>• htmltagwrap:</li>
+        <li>• ESLint</li>
+        <li>• HTMLHint</li>
+        <li>• Snippet Creator</li>
+      </ul>
+    </div>
     <!-- Nav -->
     <nav class="line-break">
       <ul>
@@ -36,7 +48,7 @@
           <!-- HTML -->
           <div class="html">
             <p>HTML</p>
-            <div class="html-code">
+            <div class="code-snippet">
               <pre><code>
 &ltabbr title="Hyper Text MarkUp Language"&gtHTML&lt/abbr&gt
 &ltabbr title="Cascading Style Sheets"&gtCSS&lt/abbr&gt
@@ -78,7 +90,7 @@
           <!-- HTML -->
           <div class="html">
             <p>HTML</p>
-            <div class="html-code">
+            <div class="code-snippet">
               <pre><code>
 &ltdiv class"solid"&gtsolid&lt/div&gt
 &ltdiv class"dotted"&gtdotted&lt/div&gt
@@ -95,7 +107,7 @@
           <!-- CSS -->
           <div class="css">
             <p>CSS</p>
-            <div class="css-code">
+            <div class="code-snippet">
               <pre><code>
 .solid,
 .dotted,
@@ -153,6 +165,56 @@
       </section>
       <hr />
 
+      <!-- Center an element  -->
+      <section class="line-break">
+        <h2>Center an element</h2>
+        <div class="center-div"><p>Center</p></div>
+        <div class="grid-2">
+          <!-- HTML Section -->
+          <div class="html">
+            <p>HTML</p>
+            <div class="code-snippet">
+              <pre><code>
+&ltdiv&gtcenter&ltdiv&gt
+              </code></pre>
+            </div>
+          </div>
+          <!-- CSS Section -->
+          <div class="css">
+            <p>CSS</p>
+            <div class="code-snippet">
+              <pre><code>
+.center-div {
+  background: orange;
+  padding: 10px;
+  width: max-content;
+  
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+              </code></pre>
+            </div>
+          </div>
+        </div>
+        <!-- Notes Section -->
+        <div class="note line-break">
+          <p><strong>Notes</strong></p>
+          <div>
+            <p>
+              top: 50% and the second 50% within translate center vertically
+              ony..
+            </p>
+            <p>
+              left: 50% and the first 50% within translate center horizontally
+              only.
+            </p>
+          </div>
+        </div>
+      </section>
+      <hr />
+
       <!-- Button Show / Hide -->
       <section id="button-show-hide" class="line-break">
         <h2>Button Show / Hide</h2>
@@ -162,17 +224,17 @@
           <!-- HTML -->
           <div class="html">
             <p>HTML</p>
-            <div class="html-code">
+            <div class="code-snippet">
               <pre><code>
 &ltbutton id"toggle-button"&gtClick me!&lt/button&gt
 &ltdiv id"element"&gtHey there!!&lt/div&gt
-          </code></pre>
+              </code></pre>
             </div>
           </div>
           <!-- CSS -->
           <div class="css">
             <p>CSS</p>
-            <div class="css-code">
+            <div class="code-snippet">
               <pre><code>
 #element {
   display: none;
@@ -180,13 +242,13 @@
   padding: 10px;
   width: fit-content;
 }
-          </code></pre>
+              </code></pre>
             </div>
           </div>
           <!-- JS -->
           <div class="js">
             <p>JS</p>
-            <div class="css-code">
+            <div class="code-snippet">
               <pre><code>
 <span class="file">main.js</span>
 import { showHide } from "./lessons/show-hide.js"
@@ -204,9 +266,7 @@ export function showHide(id) {
     element.style.display = "block";
   }
 }
-
-
-          </code></pre>
+              </code></pre>
             </div>
           </div>
         </div>
@@ -249,7 +309,7 @@ export function showHide(id) {
           <!-- HTML -->
           <div class="html">
             <p>HTML</p>
-            <div class="html-code">
+            <div class="code-snippet">
               <pre><code>
 &ltinput type=input list=cities /&gt
 &ltdatalist id="cities" /&gt
@@ -274,16 +334,16 @@ export function showHide(id) {
           <!-- HTML -->
           <div class="html">
             <p>HTML</p>
-            <div class="html-code">
+            <div class="code-snippet">
               <pre><code>
 &ltp&gtTo save the file, press &ltkbd&gtCtrl&lt/kbd&gt + &ltkbd&gtS&lt/kbd&gt.&lt/p&gt
-                </code></pre>
+              </code></pre>
             </div>
           </div>
           <!-- CSS -->
           <div class="css">
             <p>CSS</p>
-            <div class="css-code">
+            <div class="code-snippet">
               <pre><code>
 kbd {
   background-color: #f4f4f4;
@@ -291,7 +351,7 @@ kbd {
   border-radius: 3px;
   padding: 2px 4px;
 }
-                </code></pre>
+              </code></pre>
             </div>
           </div>
         </div>
@@ -311,15 +371,16 @@ kbd {
           <p>This is a Modal!</p>
           <button id="close-modal">Close</button>
         </dialog>
-        <div class="grid-2">
+        <div class="grid-3">
           <!-- HTML -->
           <div class="html">
             <p>HTML</p>
-            <div class="html-code">
+            <div class="code-snippet">
               <pre><code>
-&ltdialog&gt
+&ltbutton id="open-modal&gtOpen Moral&lt/button&gt 
+&ltdialog class="modal" id="modal"&gt
   &ltp&gtThis is a modal!&lt/p&gt
-  &ltbutton&gtClose
+  &ltbutton&gtClose 
 &lt/dialog&gt
               </code></pre>
             </div>
@@ -327,7 +388,7 @@ kbd {
           <!-- CSS -->
           <div class="css">
             <p>CSS</p>
-            <div class="css-code">
+            <div class="code-snippet">
               <pre><code>
 .modal {
   position: fixed;
@@ -344,6 +405,28 @@ kbd {
 
 .modal::backdrop {
   background: rgba(0, 0, 0, 0.5);
+}
+              </code></pre>
+            </div>
+          </div>
+          <!-- JS -->
+          <div class="js">
+            <p>JS</p>
+            <div class="code-snippet">
+              <pre><code>
+<span class="file">main.js</span>
+import { showHide } from "./lessons/modal.js"
+                
+
+
+<span class="file">button-show-hide.js</span>
+export function showHide(id) {
+  const element = document.getElementById(id);
+  if (element.style.display === "block") {
+    element.style.display = "none";
+  } else {
+    element.style.display = "block";
+  }
 }
               </code></pre>
             </div>
