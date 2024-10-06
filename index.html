@@ -30,6 +30,7 @@
         <li><a href="#abbr">Abbreviation &ltabbr&gt</a></li>
         <li><a href="#border">Border &ltborder&gt</a></li>
         <li><a href="#button-show-hide">Button Show / Hide</a></li>
+        <li><a href="#center-div">Button Show / Hide</a></li>
         <li><a href="#data-list">Data List &ltdatalist&gt</a></li>
         <li><a href="#modal-dialog">Modal &ltdialog&gt</a></li>
         <li><a href="#kbd">Keyboard &ltkbd&gt</a></li>
@@ -165,56 +166,6 @@
       </section>
       <hr />
 
-      <!-- Center an element  -->
-      <section class="line-break">
-        <h2>Center an element</h2>
-        <div class="center-div"><p>Center</p></div>
-        <div class="grid-2">
-          <!-- HTML Section -->
-          <div class="html">
-            <p>HTML</p>
-            <div class="code-snippet">
-              <pre><code>
-&ltdiv&gtcenter&ltdiv&gt
-              </code></pre>
-            </div>
-          </div>
-          <!-- CSS Section -->
-          <div class="css">
-            <p>CSS</p>
-            <div class="code-snippet">
-              <pre><code>
-.center-div {
-  background: orange;
-  padding: 10px;
-  width: max-content;
-  
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 50%);
-}
-              </code></pre>
-            </div>
-          </div>
-        </div>
-        <!-- Notes Section -->
-        <div class="note line-break">
-          <p><strong>Notes</strong></p>
-          <div>
-            <p>
-              top: 50% and the second 50% within translate center vertically
-              ony..
-            </p>
-            <p>
-              left: 50% and the first 50% within translate center horizontally
-              only.
-            </p>
-          </div>
-        </div>
-      </section>
-      <hr />
-
       <!-- Button Show / Hide -->
       <section id="button-show-hide" class="line-break">
         <h2>Button Show / Hide</h2>
@@ -286,6 +237,56 @@ export function showHide(id) {
             to attach multiple listeners to the same element, whereas onclick
             replaces any existing inline event handler.
           </p>
+        </div>
+      </section>
+      <hr />
+
+      <!-- Center an element  -->
+      <section class="line-break">
+        <h2>Center an element</h2>
+        <div class="center-div"><p>Center</p></div>
+        <div class="grid-2">
+          <!-- HTML Section -->
+          <div class="html">
+            <p>HTML</p>
+            <div class="code-snippet">
+              <pre><code>
+&ltdiv class=center-div&gtcenter&ltdiv&gt
+              </code></pre>
+            </div>
+          </div>
+          <!-- CSS Section -->
+          <div class="css">
+            <p>CSS</p>
+            <div class="code-snippet">
+              <pre><code>
+.center-div {
+  background: orange;
+  padding: 10px;
+  width: max-content;
+  
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+              </code></pre>
+            </div>
+          </div>
+        </div>
+        <!-- Notes Section -->
+        <div class="note line-break">
+          <p><strong>Notes</strong></p>
+          <div>
+            <p>
+              top: 50% and tranform: translate(-50%) center vertically
+              only.
+            </p>
+            <p>
+              left: 50% and tranform: translate(-50%) center vertically
+              only.
+            </p>
+          </div>
         </div>
       </section>
       <hr />
