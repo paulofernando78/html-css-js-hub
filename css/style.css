@@ -10,6 +10,7 @@
 
 /* Lessons */
 @import "./lessons/border.css";
+@import "./lessons/border-animation.css";
 @import "./lessons/button-show-hide.css";
 @import "./lessons/center-div.css";
 @import "./lessons/keyboard.css";

@@ -29,6 +29,11 @@
       <ul>
         <li><a href="#abbr">Abbreviation &ltabbr&gt</a></li>
         <li><a href="#border">Border &ltborder&gt</a></li>
+        <li>
+          <ul>
+            <li><a href="#border-animation">Border Animation</a></li>
+          </ul>
+        </li>
         <li><a href="#button-show-hide">Button Show / Hide</a></li>
         <li><a href="#center-div">Center a &ltdiv&gt</a></li>
         <li><a href="#data-list">Data List &ltdatalist&gt</a></li>
@@ -158,9 +163,50 @@
             </div>
           </div>
         </div>
+      </section>
 
-        <h3>Effects</h3>
-        <div>
+      <!-- Border Animation  -->
+      <section id="border-animation" class="line-break">
+        <h3>Border Animation</h3>
+        <div class="card line-break">
+          <h4>Border Animation</h4>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro,
+            officia nihil.
+          </p>
+        </div>
+        <div class="grid-3">
+          <!-- HTML Section -->
+          <div class="html">
+            <p>HTML</p>
+            <div class="code-snippet">
+              <pre><code>
+&lt...&gt...&lt...&gt
+      </code></pre>
+            </div>
+          </div>
+          <!-- CSS Section -->
+          <div class="css">
+            <p>CSS</p>
+            <div class="code-snippet">
+              <pre><code>
+...
+              </code></pre>
+            </div>
+          </div>
+          <!-- JS Section -->
+          <div class="js">
+            <p>JS</p>
+            <div class="code-snippet">
+              <pre><code>
+...
+              </code></pre>
+            </div>
+          </div>
+        </div>
+        <!-- Notes Section -->
+        <div class="note line-break">
+          <p><strong>Notes</strong></p>
           <p>...</p>
         </div>
       </section>
@@ -279,13 +325,12 @@ export function showHide(id) {
           <p><strong>Notes</strong></p>
           <div>
             <p>
-              top: 50% and tranform: translate(-50%) center vertically
-              only.
+              top: 50% and tranform: translate(-50%) center vertically only.
             </p>
             <p>
-              left: 50% and tranform: translate(-50%) center vertically
-              only.
+              left: 50% and tranform: translate(-50%) center vertically only.
             </p>
+            <p>It's possible to write only <kbd>translate: -50% -50%;</kbd></p>
           </div>
         </div>
       </section>
