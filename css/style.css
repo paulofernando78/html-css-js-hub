@@ -1,14 +1,18 @@
-/* Global */
-@import "./global/reset.css";
-@import "./global/typography.css";
-
-/* Components */
+/* components */
 @import "./components/html.css";
 @import "./components/css.css";
 @import "./components/js.css";
 @import "./components/button.css";
 
-/* Lessons */
+/* global */
+@import "./global/reset.css";
+@import "./global/typography.css";
+
+/* layout */
+@import "./layout/header.css";
+@import "./layout/nav.css";
+
+/* lessons */
 @import "./lessons/border.css";
 @import "./lessons/border-animation.css";
 @import "./lessons/button-show-hide.css";
@@ -16,11 +20,8 @@
 @import "./lessons/keyboard.css";
 @import "./lessons/modal.css";
 
-header {
-  background: black;
-  color: white;
-  padding-inline: 7px;
-}
+/* utilities */
+@import "./ultilities/spacing.css";
 
 body {
   max-width: 1519px;
@@ -29,11 +30,6 @@ body {
 
 main {
   padding: 5px;
-}
-
-nav {
-  padding: 10px;
-  background: lightgray;
 }
 
 li {
@@ -56,10 +52,6 @@ kbd {
   border-radius: 5px;
   border: solid 2px gray;
   font-weight: 900;
-}
-
-.mb {
-  margin-bottom: 3rem;
 }
 
 .code-snippet {
@@ -95,6 +87,12 @@ kbd {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
+}
+
+.flex-8px-center {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .grid-2 {
