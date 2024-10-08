@@ -25,7 +25,7 @@
       </ul>
     </div>
     <!-- Nav -->
-    <nav class="line-break">
+    <nav class="line-break mb">
       <ul>
         <li><a href="#text">Text</a></li>
         <li><a href="#abbr">Abbreviation &ltabbr&gt</a></li>
@@ -44,9 +44,8 @@
     </nav>
     <main class="line-break">
       <!-- Text -->
-      <!--  -->
-      <section class="line-break">
-        <h2>Headings</h2>
+      <section id="text" class="line-break mb">
+        <h2 class="title">Headings</h2>
         <div>
           <h1>heading 1</h1>
           <h2>heading 2</h2>
@@ -72,11 +71,10 @@
           </div>
         </div>
       </section>
-      <hr />
 
       <!-- Abbrevition <abbr> -->
-      <section id="abbr" class="line-break">
-        <h2>Abbreviation &ltabbr&gt</h2>
+      <section id="abbr" class="line-break mb">
+        <h2 class="title">Abbreviation &ltabbr&gt</h2>
         <div>
           <abbr title="Hyper Text MarkUp Language">HTML</abbr>
           <abbr title="Cascading Style Sheets">CSS</abbr>
@@ -106,11 +104,10 @@
           </div>
         </div>
       </section>
-      <hr />
 
       <!-- Border <border> -->
       <section id="border" class="line-break">
-        <h2>Border &ltborder&gt</h2>
+        <h2 class="title">Border &ltborder&gt</h2>
         <div class="grid-center">
           <div class="flex">
             <div class="solid grid-center"><p>solid</p></div>
@@ -198,8 +195,8 @@
       </section>
 
       <!-- Border Animation  -->
-      <section id="border-animation" class="line-break">
-        <h3>Border Animation</h3>
+      <section id="border-animation" class="line-break mb">
+        <h3 class="title">Border Animation</h3>
         <div class="border-background">
           <div class="card line-break">
             <h4>Border Animation</h4>
@@ -309,11 +306,10 @@
           <p>...</p>
         </div>
       </section>
-      <hr />
 
       <!-- Button Show / Hide -->
-      <section id="button-show-hide" class="line-break">
-        <h2>Button Show / Hide</h2>
+      <section id="button-show-hide" class="line-break mb">
+        <h2 class="title">Button Show / Hide</h2>
         <button id="toggle-button">Click me!</button>
         <div id="element">Hey there!</div>
         <div class="grid-3">
@@ -384,11 +380,10 @@ export function showHide(id) {
           </p>
         </div>
       </section>
-      <hr />
 
       <!-- Center an element  -->
-      <section id="center-div" class="line-break">
-        <h2>Center a &ltdiv&gt</h2>
+      <section id="center-div" class="line-break mb">
+        <h2 class="title">Center a &ltdiv&gt</h2>
         <div class="center-div"><p>Center</p></div>
         <div class="grid-2">
           <!-- HTML Section -->
@@ -433,11 +428,10 @@ export function showHide(id) {
           </div>
         </div>
       </section>
-      <hr />
 
       <!-- Data List <datalist> -->
-      <section id="data-list" class="line-break">
-        <h2>Data List &ltdatalist&gt</h2>
+      <section id="data-list" class="line-break mb">
+        <h2 class="title">Data List &ltdatalist&gt</h2>
         <div>
           <p>Search for cities.</p>
           <input type="input" list="cities" />
@@ -469,11 +463,10 @@ export function showHide(id) {
           </div>
         </div>
       </section>
-      <hr />
 
       <!-- Keyboard <kbd> -->
-      <section id="kbd" class="line-break">
-        <h2>Keyboard &ltkbd&gt</h2>
+      <section id="kbd" class="line-break mb">
+        <h2 class="title">Keyboard &ltkbd&gt</h2>
         <p>To save the file, press <kbd>Ctrl</kbd> + <kbd>S</kbd>.</p>
         <div class="grid-2">
           <!-- HTML -->
@@ -506,11 +499,10 @@ kbd {
           <p>By default, &ltkbd&gt inherets the font monospace.</p>
         </div>
       </section>
-      <hr />
 
       <!-- Modal <dialog> -->
       <section id="modal-dialog" class="line-break">
-        <h2>Modal &ltdialog&gt</h2>
+        <h2 class="title">Modal &ltdialog&gt</h2>
         <button id="open-modal">Open Modal</button>
         <dialog class="modal" id="modal">
           <p>This is a Modal!</p>
@@ -589,7 +581,6 @@ export function showHide(id) {
           </div>
         </div>
       </section>
-      <hr />
     </main>
   </body>
 </html>
